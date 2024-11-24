@@ -47,7 +47,6 @@ header h1 {
     color: #333; /* Set a text color */
     text-align: center; /* Center the text */
     height: 50px; /* Set a fixed height to prevent jumping */
-    overflow: hidden; /* Hide overflow text */
 }
 
 @keyframes float {
