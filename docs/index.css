@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe5b4; /* Light orange color */
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+header {
+    margin-bottom: 20px; /* Add some space below the header */
+}
+
+header h1 {
+    font-size: 2em; /* Increase the font size of the header */
+    color: #333; /* Set a text color */
+}
+
+.fortune-cookie, .text {
+    opacity: 0; /* Initial state: fully transparent */
+    transition: opacity 2s ease-in-out; /* Transition effect */
+}
+
+.show {
+    opacity: 1; /* Final state: fully opaque */
+}
+
+.hide {
+    opacity: 0; /* Final state: fully transparent */
+}
+
+.fortune-cookie {
+    width: 100px;
+    height: 100px;
+    background-image: url('./fortune-cookie.png');
+    background-size: cover;
+    animation: float 3s ease-in-out infinite;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+}
+
+#fortune-cookie-text {
+    margin-top: 20px; /* Add some space between the cookie and the text */
+    font-size: 18px; /* Increase the font size */
+    color: #333; /* Set a text color */
+    text-align: center; /* Center the text */
+    height: 50px; /* Set a fixed height to prevent jumping */
+    overflow: hidden; /* Hide overflow text */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-20px, -20px);
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.unclickable {
+    cursor: not-allowed;
+}
+
+.loading {
+    cursor: wait;
+}
